@@ -9,6 +9,9 @@ void setup(){
   for( int i=0; i < height; i++){
     stroke(r, g, i, i);
     line(0, i, width, i);
+    noStroke();
+   fill(255, 255, 255, 10);
+    clouds();
   }
   
  centerX=width/2;
@@ -25,7 +28,7 @@ void draw(){
   //ice - the playing field
   fill(168, 187, 201, 206);
   rect(0, centerX, width, centerY);
-  clouds();
+  
 }
 
 
@@ -40,43 +43,30 @@ void clouds(){
  float p = x+5;
  float t = y+35;
  
- noStroke();
- fill(255, 255, 255, 2);
- ellipse(x, y, 50, 50);
- ellipse(z, y, 50, 50);
- ellipse(m, y, 50, 50);
- ellipse(p, k, 50, 50);
- ellipse(z, t, 50, 50);
- ellipse(m, k, 50, 50);
  
- //cloud 2
- float c2 = 150;
- float c2y = 20;
- ellipse(x+c2, y+c2y, 50, 50);
- ellipse(z+c2, y+c2y, 50, 50);
- ellipse(m+c2, y+c2y, 50, 50);
- ellipse(p+c2, k+c2y, 50, 50);
- ellipse(z+c2, t+c2y, 50, 50);
- ellipse(m+c2, k+c2y, 50, 50);
  
- //cloud 3
- float c3 = 300;
- float c3y = 0;
- ellipse(x+c3, y+c3y, 50, 50);
- ellipse(z+c3, y+c3y, 50, 50);
- ellipse(m+c3, y+c3y, 50, 50);
- ellipse(p+c3, k+c3y, 50, 50);
- ellipse(z+c3, t+c3y, 50, 50);
- ellipse(m+c3, k+c3y, 50, 50);
+ for(float c=0; c<=450; c+=300){
+ float cy=0;
+ ellipse(x+c, y+cy, 50, 50);
+ ellipse(z+c, y+cy, 50, 50);
+ ellipse(m+c, y+cy, 50, 50);
+ ellipse(p+c, k+cy, 50, 50);
+ ellipse(z+c, t+cy, 50, 50);
+ ellipse(m+c, k+cy, 50, 50); 
+ }
  
- //cloud 4
- float c4 = 450;
- float c4y = 20;
- ellipse(x+c4, y+c4y, 50, 50);
- ellipse(z+c4, y+c4y, 50, 50);
- ellipse(m+c4, y+c4y, 50, 50);
- ellipse(p+c4, k+c4y, 50, 50);
- ellipse(z+c4, t+c4y, 50, 50);
- ellipse(m+c4, k+c4y, 50, 50);
-  
+ 
+ for(float c=150; c<=450; c+=300){
+ for(float cy2=20; cy2<=20; cy2+=20) {
+ ellipse(x+c, y+cy2, 50, 50);
+ ellipse(z+c, y+cy2, 50, 50);
+ ellipse(m+c, y+cy2, 50, 50);
+ ellipse(p+c, k+cy2, 50, 50);
+ ellipse(z+c, t+cy2, 50, 50);
+ ellipse(m+c, k+cy2, 50, 50); 
+ }
+ }
+
+ 
+ 
 }
