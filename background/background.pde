@@ -25,26 +25,19 @@ void draw(){
   //ice - the playing field
   fill(168, 187, 201, 206);
   rect(0, centerX, width, centerY);
-  
-  float x;
-  x=0;
-  float y;
-  y=0;
-  float z;
-  z=0;
-  float k;
-  k=0;
-  float m;
-  m=0;
-  float q;
-  q=0;
-  
-  //clouds
-  //bezier(x, y, z, m, z, q, x, q);
-  bezier(x+30, y+30, z+5, m+10, z+5, k+70, x+30, q+50);
-  bezier(x+30, y+30, z, m+10, z+10, k+70, x+40, q+50);
-  
-  
+ 
+ //clouds
+ float x, y;
+ x=50;
+ y=50;
+ noStroke();
+ fill(255, 255, 255, 2);
+ ellipse(x, y, 50, 50);
+ ellipse(x+30, y, 50, 50);
+ ellipse(x+60, y, 50, 50);
+ ellipse(x+5, y+30, 50, 50);
+ ellipse(x+30, y+35, 50, 50);
+ ellipse(x+60, y+30, 50, 50);
   
   
 }
