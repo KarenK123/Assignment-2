@@ -1,3 +1,14 @@
+//penguin catches the fish that come out of the hole
+//angry birds try to kill the penguin
+//the penguin can jump and duck
+//the penguin has 1 minute to catch x fish
+//if you do you move to the next round
+//birds get quicker
+//fish get quicker
+//you have nine lives
+//you can regain lives by some power up
+
+
 void setup(){
   size(700, 500);
   
@@ -28,6 +39,9 @@ void draw(){
   //ice - the playing field
   fill(168, 187, 201, 206);
   rect(0, centerX, width, centerY);
+  //hole
+  fill(0);
+  ellipse(centerX, centerY+150, 150, 50);
   
 }
 
