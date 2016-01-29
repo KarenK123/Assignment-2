@@ -21,12 +21,18 @@ void setup(){
     stroke(r, g, i, i);
     line(0, i, width, i);
     noStroke();
+   
+   
+   
    fill(255, 255, 255, 10);
     clouds();
+    
+    
+    bird();
   }
   
- centerX=width/2;
-centerY=height/2;
+   centerX=width/2;
+  centerY=height/2;
 
 }
 
@@ -44,6 +50,9 @@ void draw(){
   ellipse(centerX, centerY+150, 150, 50);
   
 }
+
+
+
 
 
 void clouds(){

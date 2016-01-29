@@ -7,29 +7,30 @@ void setup(){
 void draw(){
 }
 
+float x=100;
+float y=x/2;
 
 void bird(){
-  
   fill(random(255), random(255), random(255), random(255));
-  ellipse(200, 100, 200, 150);
+  ellipse(x, y, 100, 75);
   //beak
   fill(252, 146, 5);
-  triangle(295, 80, 350, 100, 300, 100);
-  triangle(300, 100, 350, 100, 295, 120);
+  triangle(147.5, 40, 175, 50, 150, 50);
+  triangle(150, 50, 175, 50, 147.5, 60);
   //eyes
   fill(255);
-  ellipse(250, 80, 50, 50);
+  ellipse(125, 40, 25, 25);
   fill(0);
-  ellipse(250, 80, 20, 20);
+  ellipse(125, 40, 10, 10);
   //hair
   fill(random(255), random(255), random(255), random(255));
-  triangle(260, 40, 230, 0, 230, 30);
-  triangle(230, 30, 200, 0, 200, 25);
-  triangle(200, 25, 180, 0, 180, 25);
-  triangle(180, 25, 160, 5, 160, 30);
+  triangle(130, 20, 115, 0, 115, 15);
+  triangle(115, 15, 100, 0, 100, 12.5);
+  triangle(100, 12.5, 90, 0, 90, 12.5);
+  triangle(90, 12.5, 80, 2.5, 80, 15);
   
   //wings
-  bezier(105, 120,    50, 60,     50, 60,     110, 70);
+  bezier(52.5, 60,    25, 30,     25, 30,     55, 35);
   
   
   
