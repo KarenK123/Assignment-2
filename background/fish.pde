@@ -1,20 +1,8 @@
-void setup(){
-  size(500, 500);
-  background(0);
+//fish
+void fish(){
   stroke(random(255), random(255), random(255));
   fill(random(255), random(255), random(255), random(255));
-  fish();
-}
-
-
-void draw(){
-  
-}
-
-
-
-void fish(){
-  float x=0;
+    float x=0;
   float y=0;
 //body fish
   bezier(x, y+16.5, x+16.5, y+30.5, x+33, y+30.5, x+50, y+16.5);

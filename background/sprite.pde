@@ -1,12 +1,7 @@
-void setup(){
-  size(500, 700);
-  background(255);
-  fill(0);
-}
+void penguin(){//penguin
 
-
-void draw(){
-  //head
+//head
+noStroke();
   float x=0;
   float y=0;
   
