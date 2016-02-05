@@ -18,9 +18,9 @@ class fish{
   //tail
   triangle(x+50, y+16.5, x+66.5, y+8, x+66.5, y+25);
   //eye
-  ellipse(x+13, y+13, x+5, y+5);
+  ellipse(x+13, y+13, 5, 5);
   fill(0);
-  ellipse(x+13, y+13, x+1.5, y+1.5);
+  ellipse(x+13, y+13, 1.5, 1.5);
   
 }
 }

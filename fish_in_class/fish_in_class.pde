@@ -5,7 +5,7 @@ void setup(){
   size(500, 500);
   fill(200, 200, 200);
   stroke(255);
-  myfish= new fish(0, 0);
+  myfish= new fish(100, 150);
 }
 
 void draw(){
