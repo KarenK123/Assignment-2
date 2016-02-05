@@ -1,37 +1,57 @@
 //create class
 class bird{
-  float x;
-  float y;
+  float xcent;
+  float ycent;
+  
   
   //consrtuctor
-  bird(float _x, float _y){
-    x = _x;
-    y = _y;
+  bird(float _xcent, float _ycent){
+    xcent = _xcent;
+    ycent = _ycent;
     
   }
   
   //create function
   void display(){
     
+   float wbird = 80;
+   float hbird = 50;
+  //center to right side of bird
+  float radius1 = (xcent+(wbird/2));
+  //center to left side of bird
+  float radius2 = (xcent-(wbird/2));
+  //center to top of birds head
+  float radiust = (ycent-(hbird/2));
+  
   fill(random(255), random(255), random(255), random(255));
-  ellipse(x, y, 100, 75);
+  ellipse(xcent, ycent, wbird, hbird);
+  
+  
   //beak
   fill(252, 146, 5);
-  triangle(147.5, 40, 175, 50, 150, 50);
-  triangle(150, 50, 175, 50, 147.5, 60);
+  triangle(radius1, ycent, radius1-5, ycent-10, radius1+20, ycent);
+  triangle(radius1, ycent, radius1-5, ycent+10, radius1+20, ycent);
+ 
   //eyes
   fill(255);
-  ellipse(125, 40, 25, 25);
+  ellipse(xcent+15, ycent, 15, 15);
   fill(0);
-  ellipse(125, 40, 10, 10);
+  ellipse(xcent+15, ycent, 5, 5);
+  
+  
   //hair
   fill(random(255), random(255), random(255), random(255));
-  triangle(130, 20, 115, 0, 115, 15);
-  triangle(115, 15, 100, 0, 100, 12.5);
-  triangle(100, 12.5, 90, 0, 90, 12.5);
-  triangle(90, 12.5, 80, 2.5, 80, 15);
+  triangle(xcent, radiust, xcent, radiust-15, xcent+10, radiust );
+  triangle(xcent-10, radiust, xcent-10, radiust-15, xcent, radiust );
+  triangle(xcent-20, radiust+5, xcent-20, radiust-15, xcent-10, radiust );
   
+   
   //wings
-  bezier(52.5, 60,    25, 30,     25, 30,     55, 35);
+  bezier(radius2, ycent+5,
+  radius2-20, ycent-30,
+  radius2-20, ycent-30,
+  radius2+2, ycent-10);
+  
   }
+  
 }
