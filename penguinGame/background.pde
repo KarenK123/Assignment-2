@@ -8,4 +8,8 @@ for( int i=0; i < height; i++){
   line(0, i, width, i);
   noStroke();
 }
+
+float holezone = height*.75;
+fill(201, 199, 199);
+rect(0, holezone, width, holezone);
 }
