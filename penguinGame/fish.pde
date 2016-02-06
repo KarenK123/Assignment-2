@@ -12,18 +12,24 @@ class fish{
   //create function
   void display(){
   
+    //900 500
+  float fishw = (width/18);
+  float fishh = (height/16.393);
+  float tailw = (fishw/3.03);
+  float tailh = (fishh/1.794);
+    
   //body fish
-  fill(0);
-  bezier(x, y+16.5, x+16.5, y+30.5, x+33, y+30.5, x+50, y+16.5);
-  bezier(x, y+16.5, x+16.5, y, x+33, y, x+50, y+16.5);
+  fill(125);
+  bezier(x, y, x+(fishw/3.03), y+(fishh/1.848), x+(fishw/1.51), y+(fishh/1.848), x+fishw, y);
+  bezier(x, y, x+(fishw/3.03), y-(fishh/1.848), x+(fishw/1.51), y-(fishh/1.848), x+fishw, y);
   //tail
   fill(0);
-  triangle(x+50, y+16.5, x+66.5, y+8, x+66.5, y+25);
+  triangle(x+fishw, y, x+(fishw+tailw), y-(tailh/2), x+(fishw+tailw), y+(tailh/2));
   //eye
+  fill(159);
+  ellipse(x+(fishw/3.84), y-(fishh/8.71), (fishw/10), (fishh/6.1));
   fill(0);
-  ellipse(x+13, y+13, 5, 5);
-  fill(0);
-  ellipse(x+13, y+13, 1.5, 1.5);
+  ellipse(x+(fishw/3.84), y-(fishh/8.71), (fishw/33.3), (fishh/20.33));
   
 }
 }
