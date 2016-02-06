@@ -35,7 +35,7 @@ class cloud{
  //500    cloudh=50
  
  
- for(float c=0; c<=150000; c+=300){
+ for(float c=0; c<=width; c+=(width/3)){
  float cy=0;
  ellipse(x+c, y+cy, cloudw, cloudh);
  ellipse(c2+c, y+cy, cloudw, cloudh);
@@ -45,7 +45,7 @@ class cloud{
  ellipse(c1+c, c3+cy, cloudw, cloudh); 
  }
  
- for(float c=150; c<=150000; c+=300){
+ for(float c=150; c<=width; c+=(width/3)){
    for(float cy2=20; cy2<=20; cy2+=20) {
      ellipse(x+c, y+cy2, cloudw, cloudh);
      ellipse(c2+c, y+cy2, cloudw, cloudh);
