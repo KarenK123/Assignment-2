@@ -3,22 +3,21 @@ class penguin{
   //x, coord of head
   float xhead;
   float yhead;
-  //width, height of head
-  float whead;
-  float hhead;
+  
   
   //constructor
-  penguin(float _xhead, float _yhead, float _whead, float _hhead){
+  penguin(float _xhead, float _yhead){
     xhead = _xhead;
-    yhead = _yhead; 
-    whead = _whead;
-    hhead = _hhead;
-    
+    yhead = _yhead;
   }
   
   //create function 
   void display(){
     
+  //width, height of head
+  float whead=60;
+  float hhead=100;
+  
   float xradius = (xhead - (whead / 2));
   float xradius2 = (xhead + (whead / 2));
   //bottom of body

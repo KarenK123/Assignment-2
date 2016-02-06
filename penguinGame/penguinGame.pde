@@ -13,8 +13,8 @@ void setup(){
   mybird = new bird(50, 150);
   myclouds = new cloud(0, 40);
   myfish= new fish(350, 350);
-  holes = new hole(0, 120, 50);
-  mypenguin = new penguin(200, 300, 60, 100);
+  holes = new hole(120, 50);
+  mypenguin = new penguin(200, 300);
 }
 
 void draw(){
