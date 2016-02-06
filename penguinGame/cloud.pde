@@ -2,6 +2,7 @@
 
 //creating class
 class cloud{
+  //x and y are coordinates of where the clouds start
  float x;
  float y;
  
@@ -12,38 +13,46 @@ class cloud{
    
  }
  
-
- 
  //creating function
  void display(){
  noStroke();
  fill(255);
  
- float m = x+60;
- float z = x+30;
- float k = y+30;
- float p = x+5;
- float t = y+35;
+ //the width and height of one of five circles that make a cloud
+ float cloudw = (width/18);
+ float cloudh = (height/10);
+ 
+ //x0   y40
+ //c is circle ie. c1, c2...c6 make a cloud
+ float c1 = x+(cloudw*1.2);
+ float c2 = x+(cloudw*.6);
+ float c3 = y+(cloudw*.6);
+ float c5 = y+(cloudw*.7);
+ 
+ 
+ 
+ //900    cloudw=50
+ //500    cloudh=50
+ 
  
  for(float c=0; c<=150000; c+=300){
  float cy=0;
- ellipse(x+c, y+cy, 50, 50);
- ellipse(z+c, y+cy, 50, 50);
- ellipse(m+c, y+cy, 50, 50);
- ellipse(p+c, k+cy, 50, 50);
- ellipse(z+c, t+cy, 50, 50);
- ellipse(m+c, k+cy, 50, 50); 
+ ellipse(x+c, y+cy, cloudw, cloudh);
+ ellipse(c2+c, y+cy, cloudw, cloudh);
+ ellipse(c1+c, y+cy, cloudw, cloudh);
+ ellipse(x+c, c3+cy, cloudw, cloudh);
+ ellipse(c2+c, c5+cy, cloudw, cloudh);
+ ellipse(c1+c, c3+cy, cloudw, cloudh); 
  }
- 
  
  for(float c=150; c<=150000; c+=300){
    for(float cy2=20; cy2<=20; cy2+=20) {
-     ellipse(x+c, y+cy2, 50, 50);
-     ellipse(z+c, y+cy2, 50, 50);
-     ellipse(m+c, y+cy2, 50, 50);
-     ellipse(p+c, k+cy2, 50, 50);
-     ellipse(z+c, t+cy2, 50, 50);
-     ellipse(m+c, k+cy2, 50, 50); 
+     ellipse(x+c, y+cy2, cloudw, cloudh);
+     ellipse(c2+c, y+cy2, cloudw, cloudh);
+     ellipse(c1+c, y+cy2, cloudw, cloudh);
+     ellipse(x+c, c3+cy2, cloudw, cloudh);
+     ellipse(c2+c, c5+cy2, cloudw, cloudh);
+     ellipse(c1+c, c3+cy2, cloudw, cloudh); 
    }
  }
  
