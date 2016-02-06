@@ -14,8 +14,8 @@ class bird{
   //create function
   void display(){
     
-   float wbird = 80;
-   float hbird = 50;
+   float wbird = 60;
+   float hbird = 40;
   //center to right side of bird
   float radius1 = (xcent+(wbird/2));
   //center to left side of bird
@@ -23,7 +23,7 @@ class bird{
   //center to top of birds head
   float radiust = (ycent-(hbird/2));
   
-  fill(random(255), random(255), random(255), random(255));
+  fill(105, 0, 105);
   ellipse(xcent, ycent, wbird, hbird);
   
   
@@ -40,16 +40,17 @@ class bird{
   
   
   //hair
-  fill(random(255), random(255), random(255), random(255));
-  triangle(xcent, radiust, xcent, radiust-15, xcent+10, radiust );
-  triangle(xcent-10, radiust, xcent-10, radiust-15, xcent, radiust );
-  triangle(xcent-20, radiust+5, xcent-20, radiust-15, xcent-10, radiust );
+  fill(255, 0, 0);
+  triangle(xcent, radiust, xcent, radiust-10, xcent+10, radiust );
+  triangle(xcent-10, radiust, xcent-10, radiust-10, xcent, radiust );
+  triangle(xcent-20, radiust+5, xcent-20, radiust-10, xcent-10, radiust );
   
    
   //wings
+  fill(0, 255, 0);
   bezier(radius2, ycent+5,
-  radius2-20, ycent-30,
-  radius2-20, ycent-30,
+  radius2-20, ycent-20,
+  radius2-20, ycent-20,
   radius2+2, ycent-10);
   
   }

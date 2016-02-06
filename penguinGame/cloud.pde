@@ -17,6 +17,7 @@ class cloud{
  //creating function
  void display(){
  noStroke();
+ fill(255);
  
  float m = x+60;
  float z = x+30;
@@ -24,7 +25,7 @@ class cloud{
  float p = x+5;
  float t = y+35;
  
- for(float c=0; c<=1500; c+=300){
+ for(float c=0; c<=150000; c+=300){
  float cy=0;
  ellipse(x+c, y+cy, 50, 50);
  ellipse(z+c, y+cy, 50, 50);
@@ -35,7 +36,7 @@ class cloud{
  }
  
  
- for(float c=150; c<=1500; c+=300){
+ for(float c=150; c<=150000; c+=300){
    for(float cy2=20; cy2<=20; cy2+=20) {
      ellipse(x+c, y+cy2, 50, 50);
      ellipse(z+c, y+cy2, 50, 50);

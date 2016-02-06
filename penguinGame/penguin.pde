@@ -39,28 +39,31 @@ class penguin{
   
   //white body
   fill(255);
-  arc(xhead, byhead, 80, 180, PI, TWO_PI);
+  arc(xhead, byhead, 40, 120, PI, TWO_PI);
   
    
   //feet
   fill(0);
-  ellipse(xhead-40, byhead, 80, 25);
-  ellipse(xhead+40, byhead, 80, 25);
+  ellipse(xhead-30, byhead, 60, 20);
+  ellipse(xhead+30, byhead, 60, 20);
   
   
   //eyes
   fill(255);
-  ellipse(xhead-20, yhead-50, 30, 30);
-  ellipse(xhead+20, yhead-50, 30, 30);
+  ellipse(xhead-10, yhead-30, 20, 20);
+  ellipse(xhead+10, yhead-30, 20, 20);
   fill(0);
-  ellipse(xhead-20, yhead-50, 15, 15);
-  ellipse(xhead+20, yhead-50, 15, 15);
+  ellipse(xhead-10, yhead-30, 10, 10);
+  ellipse(xhead+10, yhead-30, 10, 10);
   
   
   //beak
   fill(252, 165, 3);
-  ellipse(xhead, yhead-25, 25, 25);
-  bezier((xhead-12.5), (yhead-25), xhead, (yhead+15), xhead, (yhead+15), (xhead+12.5), (yhead-25));
+  ellipse(xhead, yhead-10, 20, 20);
+  bezier((xhead-10), (yhead-10), 
+  xhead, (yhead+30), 
+  xhead, (yhead+30), 
+  (xhead+10), (yhead-10));
   
   }
   
