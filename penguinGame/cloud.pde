@@ -1,5 +1,5 @@
 //clouds
-//need to take cloud out of loop to move correctly
+//need to take cloud out of loop to move correctly or create two more loops
 
 //creating class
 class cloud{
@@ -11,7 +11,7 @@ class cloud{
  //constructor
  cloud(float _x, float _y, float _speed){
    x = _x;
-   y = _y;
+   y = _y;;
    speed = _speed;
    
  }
@@ -38,7 +38,7 @@ class cloud{
  //500    cloudh=50
  
  
- for(float c=0; c<=(width*2); c+=(width/3)){
+ for(float c=0; c<=(width*3); c+=(width/3)){
  float cy=0;
  ellipse(x+c, y+cy, cloudw, cloudh);
  ellipse(c2+c, y+cy, cloudw, cloudh);
@@ -48,7 +48,7 @@ class cloud{
  ellipse(c1+c, c3+cy, cloudw, cloudh); 
  }
  
- for(float c=150; c<=(width*2); c+=(width/3)){
+ for(float c=150; c<=(width*3); c+=(width/3)){
    for(float cy2=20; cy2<=20; cy2+=20) {
      ellipse(x+c, y+cy2, cloudw, cloudh);
      ellipse(c2+c, y+cy2, cloudw, cloudh);
@@ -61,13 +61,13 @@ class cloud{
  
 }  
 
+//future make 30000000 while loop while lives!=0
 void move(){
   x = x - speed;
-  if (x < 0){
-    x = width;
+  if (x < -3000000){
+    x = 300;
   }
 }
-
 
 }
  
