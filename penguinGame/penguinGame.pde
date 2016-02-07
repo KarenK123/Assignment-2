@@ -10,7 +10,7 @@ void setup(){
   size(900, 500);
   background();
   //initalise
-  mybird = new bird(50, 150);
+  mybird = new bird(850, 150);
   myclouds = new cloud(0, 40);
   myfish= new fish(350, 350);
   holes = new hole((width/7.5), (height/10));
