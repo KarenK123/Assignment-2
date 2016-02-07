@@ -2,12 +2,14 @@
 class bird{
   float xcent;
   float ycent;
+  float speed;
   
   
   //consrtuctor
-  bird(float _xcent, float _ycent){
+  bird(float _xcent, float _ycent, float _speed){
     xcent = _xcent;
     ycent = _ycent;
+    speed = _speed;
     
   }
   
@@ -63,5 +65,12 @@ class bird{
   radius1-(wbird / 30), ycent-(wbird / 6));
   
   }
+  
+  void move(){
+  xcent = xcent - speed;
+  if (xcent < 0){
+    xcent = width;
+  }
+}
   
 }
