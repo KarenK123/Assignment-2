@@ -12,7 +12,7 @@ class hole{
   void display(){
    float holezone = height*.75;
    
-   for(float occurrence=(width/9); occurrence<=1500; occurrence+=(width/3)){
+   for(float occurrence=(width/4); occurrence<=1500; occurrence+=(width/2)){
      ellipse(occurrence, holezone+(height/10), hwidth, hheight);
     }
 }

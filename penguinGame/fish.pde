@@ -1,18 +1,39 @@
 //create class 
 class fish{
-  float x;
-  float y;
+  
+  float speed;
   
   //constructor
-  fish(float _x, float _y){
-    x = _x;
-    y = _y;
+  fish(float _speed){
+     speed = _speed;
   }
   
   //create function
   void display(){
   
     //900 500
+  
+  //orbiting ellipse
+  float holezone = (height*.75);
+  float dangerzone = (height*.25);
+  
+  float x = sin(val);
+  float y = cos(val);
+  //x and y and with and height of orbit
+  x *= (width/3);
+  y *= (height/3);
+  //the center point of the ellipse
+  x+= (width/2);
+  y+= (holezone-(width/15));
+  fill(255);
+  //ellipse(x, y, 20, 20);
+  //val += speed;
+    
+    
+    
+  //float x = 350;
+  //float y = 350;
+  
   float fishw = (width/18);
   float fishh = (height/16.393);
   float tailw = (fishw/3.03);
@@ -30,6 +51,10 @@ class fish{
   ellipse(x+(fishw/3.84), y-(fishh/8.71), (fishw/10), (fishh/6.1));
   fill(0);
   ellipse(x+(fishw/3.84), y-(fishh/8.71), (fishw/33.3), (fishh/20.33));
+  
+  
+  val += speed;
+  
   
 }
 }
