@@ -8,12 +8,11 @@ cloud myclouds;
 //cloud myclouds2;
 //fish
 fish myfish;
+//fish myfish2;
+//fish myfish3;
+//holes
 hole holes;
 penguin mypenguin;
-//orbit
-//orbit myorbit;
-  //float val;
-    //float speed; //= 0.02;
 
 
 void setup(){
@@ -33,7 +32,10 @@ float dangerzone = (height*.25);
   myclouds = new cloud(0, (width/12.5), 2);
   //myclouds2 = new cloud(300, 40, 3);
   //fish
-  myfish= new fish(0.02);
+  myfish= new fish(5);
+  //myfish2= new fish(0.1);
+  //myfish3= new fish(3);
+  
   holes = new hole((width/6), (height/10));
   //(width/15) is whead width of head
   mypenguin = new penguin((width/2), (holezone-(width/15)));
@@ -56,11 +58,9 @@ void draw(){
   mybird3.move();
   //fish
   myfish.display();
+ // myfish2.display();
+  //myfish3.display();
   //holes
   holes.display();
   mypenguin.display();
- // myorbit.display();
-  
-  
-  
 }
