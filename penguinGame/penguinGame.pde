@@ -12,7 +12,7 @@ hole holes;
 penguin mypenguin;
 //orbit
 //orbit myorbit;
-  float val;
+  //float val;
     //float speed; //= 0.02;
 
 

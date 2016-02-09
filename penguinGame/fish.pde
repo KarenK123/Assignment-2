@@ -17,7 +17,7 @@ class fish{
   float holezone = (height*.75);
   float dangerzone = (height*.25);
   
-  float x = sin(val);
+  /*float x = sin(val);
   float y = cos(val);
   //x and y and with and height of orbit
   x *= (width/3);
@@ -27,12 +27,15 @@ class fish{
   y+= (holezone-(width/15));
   fill(255);
   //ellipse(x, y, 20, 20);
-  //val += speed;
+  //val += speed;*/
     
     
     
   //float x = 350;
   //float y = 350;
+  float t = (frameCount/100.0)%10;
+  float x = bezierPoint((width/1.4), (width/1.4)-(width/8), (width/1.4)-(width/4), (width/1.4)-(width/2), t);
+  float y = bezierPoint( holezone+(height/10), dangerzone, dangerzone, holezone+(height/10), t);
   
   float fishw = (width/18);
   float fishh = (height/16.393);
@@ -53,7 +56,7 @@ class fish{
   ellipse(x+(fishw/3.84), y-(fishh/8.71), (fishw/33.3), (fishh/20.33));
   
   
-  val += speed;
+ // val += speed;
   
   
 }
