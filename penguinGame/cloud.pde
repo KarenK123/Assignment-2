@@ -21,9 +21,11 @@ class cloud{
  noStroke();
  fill(255);
  
+ float zonez = (height/10);
+ 
  //the width and height of one of five circles that make a cloud
  float cloudw = (width/18);
- float cloudh = (height/10);
+ float cloudh = (zonez);
  
  //x0   y40
  //c is circle ie. c1, c2...c6 make a cloud

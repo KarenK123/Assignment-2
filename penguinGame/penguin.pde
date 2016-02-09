@@ -1,19 +1,21 @@
 //create class
 class penguin{
   //x, coord of head
-  float xhead;
-  float yhead;
+  float speedd;
   
   
   //constructor
-  penguin(float _xhead, float _yhead){
-    xhead = _xhead;
-    yhead = _yhead;
+  penguin(float _speedd){
+    speedd = _speedd;
   }
+  
   
   //create function 
   void display(){
     
+    
+   //float xhead = (width/2);
+   //float yhead = (holezone-(width/15));
   //width, height of head
   float whead=(width/15); //60
   float hhead=(height/5); //100

@@ -10,6 +10,7 @@ for( int i=0; i < height; i++){
 }
 
 float holezone = height*.75;
+
 fill(201, 199, 199);
 rect(0, holezone, width, holezone);
 }

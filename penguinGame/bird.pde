@@ -15,9 +15,10 @@ class bird{
   
   //create function
   void display(){
-    //900 500
-   float wbird = (width/15);
-   float hbird = (height/12.5);
+    
+    
+  float wbird = (width/15);
+  float hbird = (height/12.5);
   //center to right side of bird
   float radius1 = (xcent+(wbird/2));
   //center to left side of bird
@@ -25,21 +26,15 @@ class bird{
   //center to top of birds head
   float radiust = (ycent-(hbird/2));
   
+  //body
   fill(105, 0, 105);
   ellipse(xcent, ycent, wbird, hbird);
-  
   
   //beak
   fill(252, 146, 5);
   stroke(0);
-  
-  triangle(radius2, ycent, 
-  radius2+(wbird / 12), ycent-(wbird / 6), 
-  radius2-(wbird / 3), ycent);
-  
-  triangle(radius2, ycent, 
-  radius2+(wbird / 12), ycent+(wbird / 6), 
-  radius2-(wbird / 3), ycent);
+  triangle(radius2, ycent, radius2+(wbird / 12), ycent-(wbird / 6), radius2-(wbird / 3), ycent);
+  triangle(radius2, ycent, radius2+(wbird / 12), ycent+(wbird / 6), radius2-(wbird / 3), ycent);
  
   //eyes
   noStroke();
@@ -59,10 +54,7 @@ class bird{
    
   //wing
   fill(0, 255, 0);
-  bezier(radius1, ycent+(wbird / 12),
-  radius1+(wbird / 3), ycent-(wbird / 3),
-  radius1+(wbird / 3), ycent-(wbird / 3),
-  radius1-(wbird / 30), ycent-(wbird / 6));
+  bezier(radius1, ycent+(wbird / 12), radius1+(wbird / 3), ycent-(wbird / 3), radius1+(wbird / 3), ycent-(wbird / 3), radius1-(wbird / 30), ycent-(wbird / 6));
   
   }
   
@@ -71,6 +63,5 @@ class bird{
   if (xcent < 0){
     xcent = width;
   }
-}
-  
+  }
 }
