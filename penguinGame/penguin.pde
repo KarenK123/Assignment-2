@@ -1,23 +1,19 @@
 //create class
 class penguin{
   //x, coord of head
-  float speedd;
+  float whead;
   
   
   //constructor
-  penguin(float _speedd){
-    speedd = _speedd;
+  penguin(float _whead){
+    whead = _whead;
   }
   
   
   //create function 
   void display(){
     
-    
-   //float xhead = (width/2);
-   //float yhead = (holezone-(width/15));
   //width, height of head
-  float whead=(width/15); //60
   float hhead=(height/5); //100
   
   //radius to left of xhead and radius to right of head 
@@ -70,4 +66,23 @@ class penguin{
   
   }
   
+}
+
+
+//if space is pressed, then penguin will move
+void keyPressed() {
+  if(key==' '){
+  if (dir == 0)  dir = -speed;
+  }
+}
+ 
+
+ 
+void move() {
+  if ((yhead += dir) < dangerzone+(zonez))  dir *= -1;
+ 
+  else if (yhead > ycoord) {
+    dir = 0;
+    yhead = ycoord;
+  }
 }

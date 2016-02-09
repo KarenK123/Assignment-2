@@ -5,8 +5,6 @@ class fish{
 
   fish(float _s){
     s = _s;
-    
-
   }
   
   //create function
@@ -18,11 +16,7 @@ class fish{
   float holezone = (height*.75);
   float dangerzone = (height*.25);
   float zonez = (height/10);
-  
-   
-  //float x = 350;
-  //float y = 350;
- 
+
  // seperate x and y coordinates that i want the fish to move along curve
   float x = bezierPoint((width/1.4), width/2, (width/2 - width/8 ), (width/4), t);
   float y = bezierPoint( holezone+(zonez), dangerzone-(zonez), dangerzone-(zonez),  holezone+(zonez), t);

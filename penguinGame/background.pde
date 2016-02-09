@@ -1,7 +1,7 @@
 void background(){//make background gradient with for loop
 int r = 0;
 int g = 0;
-int b;
+//int b; for blue
   
 for( int i=0; i < height; i++){
   stroke(r, g, i, i);
