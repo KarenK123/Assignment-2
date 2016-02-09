@@ -33,5 +33,6 @@ void draw(){
  
  fill(255,0,0);
   ellipse(x2, y2, 35, 35);
+  
  
 }

@@ -14,12 +14,17 @@ penguin mypenguin;
 
 void setup(){
   size(900, 500);
+  
+float holezone = (height*.75);
+float dangerzone = (height*.25);
+
+  //fullScreen();
   background();
   //initalise
   //bird
-  mybird = new bird(300, 150, 3);
-  mybird2 = new bird(0, 180, 3);
-  mybird3 = new bird(500, 200, 3);
+  mybird = new bird((width/3), (dangerzone + height/10), 3);
+  mybird2 = new bird(0, (dangerzone + height /20), 3);
+  mybird3 = new bird((width/1.8), (dangerzone + height/30), 3);
   //clouds
   myclouds = new cloud(0, 40, 3);
   //myclouds2 = new cloud(300, 40, 3);
