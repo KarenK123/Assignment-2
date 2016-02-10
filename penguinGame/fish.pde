@@ -2,7 +2,7 @@
 class fish{
   
   float fishBody;
-
+  
   fish(float _fishBody){
     fishBody = _fishBody;
   }
