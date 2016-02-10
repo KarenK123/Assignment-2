@@ -55,7 +55,7 @@ void setup(){
 
 //global variables
 float dir= 0;
-float speed = 8;
+float speed = 12;
 float holezone;
 float dangerzone;
 //zonez added or minus holezone or dangerzone 
@@ -191,10 +191,18 @@ void draw(){
  break;
 }
 if(score < -150){
-  text("YOU LOSE. Score:" + score, width/2, height/2);
+  String lines[] = loadStrings("loser.txt");
+  for (int i = 0; i < lines.length; i++) {
+    fill(255);
+    text(lines[i] +score, (0), (height/2), (width/2), (height/2));  // Text wraps within text box
+  }
 }
 if(score > 150){
-  text("YOU WIN!!!. Score:" + score, width/2, height/2);
+  String lines[] = loadStrings("winner.txt");
+  for (int i = 0; i < lines.length; i++) {
+    fill(255);
+    text(lines[i] +score, (0), (height/2), (width/2), (height/2));  // Text wraps within text box
+  }
 }
 }
 
