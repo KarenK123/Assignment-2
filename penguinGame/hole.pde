@@ -1,3 +1,4 @@
+//the class governing the holes which the fish come out of
 //create class
 class hole{
   float hwidth;
@@ -11,8 +12,6 @@ class hole{
   
   void display(){
     fill(0);
-   float holezone = height*.75;
-   float zonez = (height/10);
    
    for(float occurrence=(width/4); occurrence<=1500; occurrence+=(width/2)){
      ellipse(occurrence, holezone+(zonez), hwidth, hheight);

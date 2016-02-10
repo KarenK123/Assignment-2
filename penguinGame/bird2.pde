@@ -1,3 +1,5 @@
+//the second bird class, it is a subclass of the superclass bird
+
 //create class
 class bird2 extends bird{
   float colour;

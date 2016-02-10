@@ -1,3 +1,5 @@
+//superclass bird
+
 //create class
 class bird{
   float xcent;

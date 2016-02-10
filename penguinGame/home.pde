@@ -1,3 +1,5 @@
+//thsi is the homepage, where the instructions are given
+
 void homepage() {
  
   String lines[] = loadStrings("welcome.txt");

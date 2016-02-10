@@ -1,7 +1,5 @@
 float score =0;
 
-
-
 void lose(){
   println("noooo");
     score--;

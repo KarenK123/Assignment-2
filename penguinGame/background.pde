@@ -1,3 +1,5 @@
+//governs the gradient background and the ice
+
 void background(){//make background gradient with for loop
 int r = 0;
 int g = 0;

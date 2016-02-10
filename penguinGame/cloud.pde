@@ -1,5 +1,4 @@
-//clouds
-//need to take cloud out of loop to move correctly or create two more loops
+//clouds class
 
 //creating class
 class cloud{
