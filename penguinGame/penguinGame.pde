@@ -1,8 +1,14 @@
 PFont font;
 //declaring classes
-//bird
+//bird easy
 bird mybird;
-bird2 mybird2;
+//bird med
+bird mybirdm;
+bird2 mybird2m;
+//bird hard
+bird mybirdh;
+bird2 mybird2h;
+bird3 mybird3h;
 //clouds
 cloud myclouds;
 //fish
@@ -33,7 +39,14 @@ void setup(){
   //initalise classes
   //bird
   mybird = new bird(0, ((dangerzone) + (height/10)), 2.5, (width/15));
-  mybird2 = new bird2((width/2), ((dangerzone) + (height/20)), 2.5, (width/15), 255);
+  //med
+  mybirdm = new bird(0, ((dangerzone) + (height/10)), 3.5, (width/15));
+  mybird2m = new bird2((width/2), ((dangerzone) + (height/20)), 3.5, (width/15), 255);
+  //hard
+  mybirdh = new bird(0, ((dangerzone) + (height/10)), 5, (width/15));
+  mybird2h = new bird2((width/1.5), ((dangerzone) + (height/20)), 5, (width/15), 255);
+  mybird3h = new bird3((width/3), ((dangerzone) + (height/30)), 5, (width/15), 255);
+  //clouds
   myclouds = new cloud(0, (width/12.5), 0.1);
   myfish= new fish((width/18) + ((width/18)/3.03));
   holes = new hole((width/6), (zonez));
@@ -53,36 +66,34 @@ float t;
 float x;
 float y;
 
+int mode = 0;
 
 void draw(){
+  switch (mode)
+  {
+    case 0:
     homepage();
-    background();
+     myclouds.display();
+      //holes
+  holes.display();
+  break;
+  case 1:
+  background();
   //clouds
   myclouds.display();
   myclouds.move();
   //bird
   mybird.display();
-  mybird2.display();
   mybird.move();
-  mybird2.move(); 
-  //fish
-  myfish.display();
   //holes
   holes.display();
+  //fish
+  myfish.display();
   mypenguin.display();
-  
   //penguin moving
   if (dir != 0)  move();
-  
-  
-  
   //lives taken away
   if( dist( mybird.xcent, mybird.ycent, mypenguin.xhead, yhead) < mybird.wbird + mypenguin.whead ){
-    println("noooo");
-    lives--;
-    println(lives);
-  }
-  if( dist( mybird2.xcent, mybird2.ycent, mypenguin.xhead, yhead) < mybird2.wbird + mypenguin.whead ){
     println("noooo");
     lives--;
     println(lives);
@@ -92,6 +103,83 @@ void draw(){
     lives++;
     println(lives);
   }
+  break;
+  case 2:
+    background();
+  //clouds
+  myclouds.display();
+  myclouds.move();
+  //bird
+  mybirdm.display();
+  mybird2m.display();
+  mybirdm.move();
+  mybird2m.move(); 
+  //holes
+  holes.display();
+  //fish
+  myfish.display();
+  mypenguin.display();
+  //penguin moving
+  if (dir != 0)  move();
+  //lives taken away
+  if( dist( mybirdm.xcent, mybirdm.ycent, mypenguin.xhead, yhead) < mybirdm.wbird + mypenguin.whead ){
+    println("noooo");
+    lives--;
+    println(lives);
+  }
+  if( dist( mybird2m.xcent, mybird2m.ycent, mypenguin.xhead, yhead) < mybird2m.wbird + mypenguin.whead ){
+    println("noooo");
+    lives--;
+    println(lives);
+  }
+  if( dist( x, y, mypenguin.xhead, yhead) < myfish.fishBody + mypenguin.whead ){
+    println("yessssss");
+    lives++;
+    println(lives);
+  }
+  break;
+  case 3:
+    background();
+  //clouds
+  myclouds.display();
+  myclouds.move();
+  //bird
+  mybirdh.display();
+  mybird2h.display();
+  mybird3h.display();
+  mybirdh.move();
+  mybird2h.move(); 
+  mybird3h.move(); 
+  //holes
+  holes.display();
+  //fish
+  myfish.display();
+  mypenguin.display();
+  //penguin moving
+  if (dir != 0)  move();
+  //lives taken away
+  if( dist( mybirdh.xcent, mybirdh.ycent, mypenguin.xhead, yhead) < mybirdh.wbird + mypenguin.whead ){
+    println("noooo");
+    lives--;
+    println(lives);
+  }
+  if( dist( mybird2h.xcent, mybird2h.ycent, mypenguin.xhead, yhead) < mybird2h.wbird + mypenguin.whead ){
+    println("noooo");
+    lives--;
+    println(lives);
+  }
+  if( dist( mybird3h.xcent, mybird3h.ycent, mypenguin.xhead, yhead) < mybird3h.wbird + mypenguin.whead ){
+    println("noooo");
+    lives--;
+    println(lives);
+  }4
+  if( dist( x, y, mypenguin.xhead, yhead) < myfish.fishBody + mypenguin.whead ){
+    println("yessssss");
+    lives++;
+    println(lives);
+  }
+ break;
+}
 }
 
 
@@ -104,9 +192,9 @@ void keyPressed()
   if (dir == 0)  dir = -speed;
   }
   
-  /*if (key >= '0' && key <='9')
+  if (key >= '0' && key <='9')
   {
     mode = key - '0';
   }
-  println(mode);*/
+  println(mode);
 }

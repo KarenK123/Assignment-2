@@ -10,6 +10,7 @@ class hole{
   }
   
   void display(){
+    fill(0);
    float holezone = height*.75;
    float zonez = (height/10);
    
