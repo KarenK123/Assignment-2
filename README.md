@@ -1,8 +1,8 @@
 # Assignment-2
-Assignment 2 - Game Assignment
+_Assignment 2 - Game Assignment_
 
 
-Welcome to the Penguin Game 
+_Welcome to the Penguin Game!!_ 
 
 You are the penguin.
 
@@ -17,4 +17,4 @@ If you would like to play please
 Press 1: for easy 
 Press 2: for medium and 
 Press 3: for hard. 
-Good luck . . . 
+_Good luck . . ._ 
