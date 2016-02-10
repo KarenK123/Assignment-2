@@ -65,6 +65,7 @@ float yhead;
 float t;
 float x;
 float y;
+float score=0;
 
 int mode = 0;
 
@@ -190,9 +191,11 @@ void draw(){
  break;
 }
 if(score < -150){
-  text("YOU LOSE", width/2, height/2);
+  text("YOU LOSE. Score:" + score, width/2, height/2);
 }
-
+if(score > 150){
+  text("YOU WIN!!!. Score:" + score, width/2, height/2);
+}
 }
 
 

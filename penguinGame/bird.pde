@@ -47,9 +47,9 @@ class bird{
   //hair
   //cant put in for loop because of ellipse slope
   fill(255, 0, 0);
-  triangle(xcent, radiust,                             xcent, radiust-(hbird / 4),                             xcent+(hbird / 4), radiust+(hbird / 24) );
-  triangle(xcent-(hbird / 4), radiust+(hbird/18),                 xcent-(hbird / 4), radiust-(hbird / 4),                  xcent, radiust );
-  triangle(xcent-(hbird / 2), radiust+(hbird / 7),     xcent-(hbird / 2), radiust-(hbird / 4),                   xcent-(hbird / 4), radiust+(hbird/18));
+  triangle(xcent, radiust, xcent, radiust-(hbird / 4), xcent+(hbird / 4), radiust+(hbird / 24) );
+  triangle(xcent-(hbird / 4), radiust+(hbird/18), xcent-(hbird / 4), radiust-(hbird / 4), xcent, radiust );
+  triangle(xcent-(hbird / 2), radiust+(hbird / 7), xcent-(hbird / 2), radiust-(hbird / 4), xcent-(hbird / 4), radiust+(hbird/18));
   
    
   //wing
@@ -62,6 +62,9 @@ class bird{
   xcent = xcent - speed;
   if (xcent < 0){
     xcent = width;
+    if(score < -150 || score > 150){
+      noLoop();
+    }
   }
   }
 }

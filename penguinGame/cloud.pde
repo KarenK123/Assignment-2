@@ -59,11 +59,11 @@ class cloud{
  
 }  
 
-//future make 30000000 while loop while lives!=0
+
 void move(){
   x = x - speed;
-  if (x < -3000000){
-    x = 300;
+  if (x < -(width*width)){
+    x = width;      
   }
 }
 
