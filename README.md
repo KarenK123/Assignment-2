@@ -17,5 +17,7 @@ If you would like to play please
 Press 1: for easy 
 Press 2: for medium and 
 Press 3: for hard. 
+
+Once you've lost or won, press 'l' to save your stats and view them in the stats.txt file!
 _Good luck . . ._ 
 
