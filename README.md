@@ -20,5 +20,4 @@ Press 3: for hard.
 _Good luck . . ._ 
 
 
-file:///Users/Karen/Desktop/Screen%20Shot%202016-02-10%20at%2011.39.41.png
-file:///Users/Karen/Desktop/Screen%20Shot%202016-02-10%20at%2011.39.51.png
+![Alt text](file:///Users/Karen/Desktop/screenshots/Screen%20Shot%202016-02-10%20at%2011.39.41.png "Optional title")
