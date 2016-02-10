@@ -1,12 +1,15 @@
 //create class
 class penguin{
-  //x, coord of head
+  //xhead is x coord of head
   float whead;
-  
+  float xhead;
+  float ycoord;
   
   //constructor
-  penguin(float _whead){
+  penguin(float _whead, float _xhead, float _ycoord){
     whead = _whead;
+    xhead = _xhead;
+    ycoord = _ycoord;
   }
   
   
@@ -66,14 +69,6 @@ class penguin{
   
   }
   
-}
-
-
-//if space is pressed, then penguin will move
-void keyPressed() {
-  if(key==' '){
-  if (dir == 0)  dir = -speed;
-  }
 }
  
 

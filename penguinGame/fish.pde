@@ -1,18 +1,17 @@
 //create class 
 class fish{
   
-  float s;
+  float fishBody;
 
-  fish(float _s){
-    s = _s;
+  fish(float _fishBody){
+    fishBody = _fishBody;
   }
   
   //create function
   void display(){
   
-    float t = (frameCount/100.0)%1;
-    
-    
+  float t = (frameCount/100.0)%1;
+  
   float holezone = (height*.75);
   float dangerzone = (height*.25);
   float zonez = (height/10);

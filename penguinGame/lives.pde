@@ -1,1 +1,1 @@
-float lives;
+float lives=5;

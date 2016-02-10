@@ -1,21 +1,15 @@
 //create class
-class bird{
-  float xcent;
-  float ycent;
-  float speed;
-  float wbird;
+class bird2 extends bird{
+  float colour;
   
   //consrtuctor
-  bird(float _xcent, float _ycent, float _speed, float _wbird){
-    xcent = _xcent;
-    ycent = _ycent;
-    speed = _speed;
-    wbird = _wbird;
+  bird2(float xcent, float ycent, float speed, float wbird, float _colour){
+    super(xcent, ycent, speed, wbird);
+    colour = _colour;
   }
   
   //create function
   void display(){
-    
     
   //float wbird = (width/15);
   float hbird = (height/12.5);
@@ -27,11 +21,11 @@ class bird{
   float radiust = (ycent-(hbird/2));
   
   //body
-  fill(105, 0, 105);
+  fill(105, 105, 0);
   ellipse(xcent, ycent, wbird, hbird);
   
   //beak
-  fill(252, 146, 5);
+  fill(252, 216, 5);
   stroke(0);
   triangle(radius2, ycent, radius2+(wbird / 12), ycent-(wbird / 6), radius2-(wbird / 3), ycent);
   triangle(radius2, ycent, radius2+(wbird / 12), ycent+(wbird / 6), radius2-(wbird / 3), ycent);
@@ -46,22 +40,15 @@ class bird{
   
   //hair
   //cant put in for loop because of ellipse slope
-  fill(255, 0, 0);
-  triangle(xcent, radiust,                             xcent, radiust-(hbird / 4),                             xcent+(hbird / 4), radiust+(hbird / 24) );
+  fill(100, 0, 100);
+   triangle(xcent, radiust,                             xcent, radiust-(hbird / 4),                             xcent+(hbird / 4), radiust+(hbird / 24) );
   triangle(xcent-(hbird / 4), radiust+(hbird/18),                 xcent-(hbird / 4), radiust-(hbird / 4),                  xcent, radiust );
   triangle(xcent-(hbird / 2), radiust+(hbird / 7),     xcent-(hbird / 2), radiust-(hbird / 4),                   xcent-(hbird / 4), radiust+(hbird/18));
   
    
   //wing
-  fill(0, 255, 0);
+  fill(255, 0, 0);
   bezier(radius1, ycent+(wbird / 12), radius1+(wbird / 3), ycent-(wbird / 3), radius1+(wbird / 3), ycent-(wbird / 3), radius1-(wbird / 30), ycent-(wbird / 6));
   
-  }
-  
-  void move(){
-  xcent = xcent - speed;
-  if (xcent < 0){
-    xcent = width;
-  }
   }
 }
