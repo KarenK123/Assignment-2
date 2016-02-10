@@ -11,7 +11,6 @@ void lose(){
 }
 
 void win(){
-  
    println("yessssss");
     score++;
     println(score);

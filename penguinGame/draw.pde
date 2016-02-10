@@ -61,7 +61,7 @@ void draw(){
     if( dist( mybird2m.xcent, mybird2m.ycent, mypenguin.xhead, yhead) < mybird2m.wbird + mypenguin.whead ){
       lose();
     }
-    if( dist( x, y, mypenguin.xhead, yhead) < myfish.fishBody + mypenguin.whead ){
+    if( dist( myfish.x, myfish.y, mypenguin.xhead, yhead) < myfish.fishBody + mypenguin.whead ){
       win();
     }
   break;

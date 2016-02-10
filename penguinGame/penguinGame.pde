@@ -34,10 +34,6 @@ void setup(){
   zonez = (height/10);
   ycoord = (holezone-(width/15));
   yhead = ycoord;
-  t = (frameCount/100.0)%1;
-  x = bezierPoint((width/1.4), width/2, (width/2 - width/8 ), (width/4), t);
-  y = bezierPoint( holezone+(zonez), dangerzone-(zonez), dangerzone-(zonez),  holezone+(zonez), t);
-  
   
   //initalise classes
   //bird
@@ -51,7 +47,7 @@ void setup(){
   mybird3h = new bird3((width/3), ((dangerzone) + (height/30)), 5, (width/15), 255);
   //clouds
   myclouds = new cloud(0, (width/12.5), 0.1);
-  myfish= new fish((width/18) + ((width/18)/3.03));
+  myfish= new fish((width/18) + ((width/18)/3.03), (bezierPoint((width/1.4), width/2, (width/2 - width/8 ), (width/4), t)), (bezierPoint( holezone+(zonez), dangerzone-(zonez), dangerzone-(zonez),  holezone+(zonez), t)), (frameCount/100.0)%1);
   holes = new hole((width/6), (zonez));
   mypenguin = new penguin((width/15), (width/2), (holezone-(width/15)));
 }
