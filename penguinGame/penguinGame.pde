@@ -92,16 +92,18 @@ void draw(){
   mypenguin.display();
   //penguin moving
   if (dir != 0)  move();
-  //lives taken away
+  //score taken away
   if( dist( mybird.xcent, mybird.ycent, mypenguin.xhead, yhead) < mybird.wbird + mypenguin.whead ){
     println("noooo");
-    lives--;
-    println(lives);
+    score--;
+    println(score);
+    text("score:" +score, width-200, 20);
   }
   if( dist( x, y, mypenguin.xhead, yhead) < myfish.fishBody + mypenguin.whead ){
     println("yessssss");
-    lives++;
-    println(lives);
+    score++;
+    println(score);
+    text("score:" +score, width-200, 20);
   }
   break;
   case 2:
@@ -121,21 +123,24 @@ void draw(){
   mypenguin.display();
   //penguin moving
   if (dir != 0)  move();
-  //lives taken away
+  //score taken away
   if( dist( mybirdm.xcent, mybirdm.ycent, mypenguin.xhead, yhead) < mybirdm.wbird + mypenguin.whead ){
     println("noooo");
-    lives--;
-    println(lives);
+    score--;
+    println(score);
+    text("score:" +score, width-200, 20);
   }
   if( dist( mybird2m.xcent, mybird2m.ycent, mypenguin.xhead, yhead) < mybird2m.wbird + mypenguin.whead ){
     println("noooo");
-    lives--;
-    println(lives);
+    score--;
+    println(score);
+    text("score:" +score, width-200, 20);
   }
   if( dist( x, y, mypenguin.xhead, yhead) < myfish.fishBody + mypenguin.whead ){
     println("yessssss");
-    lives++;
-    println(lives);
+    score++;
+    println(score);
+    text("score:" +score, width-200, 20);
   }
   break;
   case 3:
@@ -157,29 +162,37 @@ void draw(){
   mypenguin.display();
   //penguin moving
   if (dir != 0)  move();
-  //lives taken away
+  //score taken away
   if( dist( mybirdh.xcent, mybirdh.ycent, mypenguin.xhead, yhead) < mybirdh.wbird + mypenguin.whead ){
     println("noooo");
-    lives--;
-    println(lives);
+    score--;
+    println(score);
+    text("score:" +score, width-200, 20);
   }
   if( dist( mybird2h.xcent, mybird2h.ycent, mypenguin.xhead, yhead) < mybird2h.wbird + mypenguin.whead ){
     println("noooo");
-    lives--;
-    println(lives);
+    score--;
+    println(score);
+    text("score:" +score, width-200, 20);
   }
   if( dist( mybird3h.xcent, mybird3h.ycent, mypenguin.xhead, yhead) < mybird3h.wbird + mypenguin.whead ){
     println("noooo");
-    lives--;
-    println(lives);
-  }4
+    score--;
+    println(score);
+    text("score:" +score, width-200, 20);
+  }
   if( dist( x, y, mypenguin.xhead, yhead) < myfish.fishBody + mypenguin.whead ){
     println("yessssss");
-    lives++;
-    println(lives);
+    score++;
+    println(score);
+    text("score:" +score, width-200, 20);
   }
  break;
 }
+if(score < -150){
+  text("YOU LOSE", width/2, height/2);
+}
+
 }
 
 
