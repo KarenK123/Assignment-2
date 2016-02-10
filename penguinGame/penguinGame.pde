@@ -16,11 +16,14 @@ fish myfish;
 //holes
 hole holes;
 penguin mypenguin;
-
+  
+PrintWriter output;
 
 void setup(){
   size(900, 500);
   background();
+  //stats file
+  output = createWriter("stats.txt"); 
   //loading font
   font = loadFont("snap40.vlw");
   textFont(font);
@@ -72,6 +75,10 @@ int mode = 0;
 void keyPressed()
 {
   //if space is pressed, then penguin will jump
+  if(key == 'l'){
+    output.flush();  // Writes the remaining data to the file
+    output.close();  // Finishes the file
+  }
   if(key==' '){
   if (dir == 0)  dir = -speed;
   }

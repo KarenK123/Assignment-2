@@ -7,6 +7,7 @@ void lose(){
     score--;
     println(score);
     text("score:" +score, width-200, 20);
+    output.println("Score:" +score);
 }
 
 void win(){
@@ -15,5 +16,5 @@ void win(){
     score++;
     println(score);
     text("score:" +score, width-200, 20);
-  
+    output.println("Score:" +score);
 }

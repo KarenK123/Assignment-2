@@ -19,6 +19,10 @@ class fish{
  // seperate x and y coordinates that i want the fish to move along curve
   float x = bezierPoint((width/1.4), width/2, (width/2 - width/8 ), (width/4), t);
   float y = bezierPoint( holezone+(zonez), dangerzone-(zonez), dangerzone-(zonez),  holezone+(zonez), t);
+  noFill();
+  stroke(0);
+  //arc(width/2, holezone+zonez, width/2, height, PI, TWO_PI);
+  
   
   float fishw = (width/18);
   float fishh = (height/16.393);
